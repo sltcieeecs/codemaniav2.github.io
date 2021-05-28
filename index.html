@@ -33,6 +33,8 @@
 
 	<!-- Timeline --> 
 	<link rel="stylesheet" href="/css/timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body id="page-top">
@@ -97,28 +99,33 @@
 			</div>
 		</div>
 	</div>
-	<div class="display">
-		<div id="clock" class="clock">
-			<h1 class="event_title">Coming Soon!</h1>
-			<div id="numbers">
-				<span class="days"></span>
-				<span class="hours"></span>
-				<span class="minutes"></span>
-				<span class="seconds"></span>
+	<div class="display" style="background: #1d1c29;">
+		<div class="size1 overlay1">
+			<!--  -->
+			<div class="size1 flex-col-c-m p-l-15 p-r-15 p-t-50 p-b-50">
+				<div class="flex-w flex-c-m cd100 p-b-33">
+					<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
+						<span class="l2-txt1 p-b-9" id="days"></span>
+						<span class="s2-txt1">Days</span>
+					</div>
+	
+					<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
+						<span class="l2-txt1 p-b-9" id="hours"></span>
+						<span class="s2-txt1">Hours</span>
+					</div>
+	
+					<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
+						<span class="l2-txt1 p-b-9" id="minutes"></span>
+						<span class="s2-txt1">Minutes</span>
+					</div>
+	
+					<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
+						<span class="l2-txt1 p-b-9" id="seconds"></span>
+						<span class="s2-txt1">Seconds</span>
+					</div>
+				</div>
 			</div>
-			<div id="units">
-				<span>Days</span>
-				<span>Hours</span>
-				<span>Minutes</span>
-				<span>Seconds</span>
-			</div>
-		</div>
-		<div id="door" class="hide">
-			<h1 class="event_title">Event Is Live</h1>
-			<p class="action_caption">Click the button below to enter Live Stream</p>
-			<button class="call_to_action_button" type="button" onclick="liveStream()">Enter Live Stream!</button>
-		</div>
-		
+		</div>		
 	</div>
 	<!-- Schedule-Timeline -->
 	<section class="timeline">
@@ -350,6 +357,41 @@
 
 		<!-- Custom javascript -->
 		<script src="js/custom.js"></script>
+		<script>
+			// Set the date we're counting down to
+			var countDownDate = new Date("Jun 5, 2021 15:37:25").getTime();
+			
+			// Update the count down every 1 second
+			var x = setInterval(function() {
+			
+			  // Get today's date and time
+			  var now = new Date().getTime();
+				
+			  // Find the distance between now and the count down date
+			  var distance = countDownDate - now;
+				
+			  // Time calculations for days, hours, minutes and seconds
+			  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+				
+			  // Output the result in an element with id="demo"
+			  document.getElementById("days").innerHTML = days;
+			  document.getElementById("hours").innerHTML = hours;
+			  document.getElementById("minutes").innerHTML = minutes;
+			  document.getElementById("seconds").innerHTML = seconds;
+				
+			  // If the count down is over, write some text 
+			  if (distance < 0) {
+				clearInterval(x);
+				document.getElementById("days").innerHTML = "00";
+			  document.getElementById("hours").innerHTML = "00";
+			  document.getElementById("minutes").innerHTML = "00";
+			  document.getElementById("seconds").innerHTML = "00";
+			  }
+			}, 1000);
+		</script>
 
 		<!-- Particle library
 		<script src="particles/particles.js"></script>
