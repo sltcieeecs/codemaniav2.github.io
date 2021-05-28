@@ -126,8 +126,8 @@ body {
   .timeline ul li:nth-child(even) .content {
     left: 45px;
     background: #1d1c29;
-    background: -webkit-linear-gradient(-45deg, #56bc83, #1d1c29);
-    background: linear-gradient(-45deg, #56bc83, #1d1c29);
+    background: -webkit-linear-gradient(-45deg, #1d1c29, #1d1c29);
+    background: linear-gradient(-45deg, #1d1c29, #1d1c29);
   }
   .timeline ul li:nth-child(even) .content:before {
     left: -33px;
