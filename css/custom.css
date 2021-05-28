@@ -21,7 +21,7 @@ body {
 }
 
 .sub-heading-title {
-	padding: 6em 0 2em 0;
+	padding: 2em 0 2em 0;
 }
 
 .vertical-padding {
@@ -654,9 +654,6 @@ p {
   color: #;
 }
 */
-.sponsor-img-container {
-  padding-bottom: 8em;
-}
 
 .sponsors-img {
   width: 20%;
