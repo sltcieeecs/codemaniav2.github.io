@@ -4,10 +4,11 @@
 /*---------------------------------------------*/
 .s2-txt1 {
   font-family: 'Nunito';
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   color: #846add;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 .s2-txt2 {
