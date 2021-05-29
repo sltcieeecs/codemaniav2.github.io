@@ -35,10 +35,17 @@
 	<link rel="stylesheet" href="/css/timeline.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
 	<style>
+		html{
+			scroll-behavior: smooth;
+		}
 		.prices-box{
 			box-shadow: 2px 2px 4px 0px #f0b036;
 			border-radius: 4px;
+		}
+		.fa-angle-double-down{
+			color: #ffa600;
 		}
 	</style>
 </head>
@@ -102,6 +109,12 @@
 						class="btn btn-primary js-scroll-trigger"
 						style="z-index: 1; position: relative;">Register Now</a>
 				</div>
+				<div class="scroll-ho text-light text-center mt-5">
+					<a href="#cashPrices">
+						<h4>Scroll Down</h4>
+						<i class="fa fa-angle-double-down bx-fade-down h1" aria-hidden="true"></i>
+				  </a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -127,13 +140,13 @@
 	
 					<div class="flex-col-c-m size2 bor1 m-l-15 m-r-15 m-b-20">
 						<span class="l2-txt1 p-b-9" id="seconds"></span>
-						<span class="s2-txt1">Seconds</span>
+						<span class="s2-txt1" id="cashPrices">Seconds</span>
 					</div>
 				</div>
 			</div>
 		</div>		
 	</div>
-	<div class="container">
+	<div class="container" >
 		<div class="row justify-content-center text-light prices">
 			<div class="col-md-3 col-12 mx-1 text-center prices-box">
 				<img src="img/1Place.png" class="img-fluid">
